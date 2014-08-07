@@ -11,18 +11,12 @@ Tool usage:
 ```
 ## Install
 
-Copy the file to /usr/bin/ or /usr/sbin/ directory.
-
-You will need python2 to run this script, open your terminal and run 
-
+* Copy this file into directory  `/usr/bin/`  or `/usr/sbin/`
+* You will need python2 to run this script, open your terminal and run 
 ```
-
 $ which python2
-
 ```
-Use the output to replace python2 location at the very beginning of the script. 
-
+* Use the output to replace python2 location at the very beginning of the script. 
 ```
 #!/usr/local/bin/python2
-
 ```
