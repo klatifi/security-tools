@@ -1,24 +1,27 @@
 kl-heartbleed
 ==========
 
-A tool for CVE-2014-0160. I name this kl-heartbleed, but you can give it any name you want.
+A tool for CVE-2014-0160. I named it kl-heartbleed, but you can give it any name you want.
 
 Tool usage:
 
 ```
-    kl-heartbleed example.com -p 443
+    kl-heartbleed server.com -p 443
 
 ```
 ## Install
 
-You will need python2, open your terminal and run 
+Copy the file to /usr/bin/ or /usr/sbin/ directory.
+
+You will need python2 to run this script, open your terminal and run 
 
 ```
 
 $ which python2
 
 ```
-use the output to replace python2 location at the very beginning of the script. 
+Use the output to replace python2 location at the very beginning of the script. 
+
 ```
 #!/usr/local/bin/python2
 
