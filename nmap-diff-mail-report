@@ -1,0 +1,34 @@
+#! /bin/bash
+
+DIR="/home/user/nmap-scans"
+TODAY=`date +%Y%m%d`
+YESTERDAY=`date -d yesterday +%Y%m%d`
+
+echo -n "Enter IP address or subnet (example: 192.168.1.0-255): "
+
+read NETWORKS
+
+echo "Scanning $NETWORKS now"
+
+for network in $NETWORKS
+do
+      nmap -n -sS $network -oG $DIR/$network.$TODAY.nmap
+done
+
+echo "Checking the difference between this scan and the scan ran $YESTERDAY"
+
+for network in $NETWORKS
+do
+      diff -I "^#" $DIR/$network.$TODAY.nmap $DIR/$network.$YESTERDAY.nmap  > $DIR/$network.$TODAY.diff
+done
+
+echo "Sending an e-mail if diff found"
+
+for network in $NETWORKS
+do
+      SIZE=`find $DIR/$network.$TODAY.diff -size +0b`
+      if [ "$SIZE" = "$DIR/$network.$TODAY.diff" ]
+      then
+              cat $DIR/$network.$TODAY.diff | mail -s "Change Detected for $network" user@host.com
+      fi
+done
