@@ -1,6 +1,5 @@
 #!/bin/sh
 #
-# Taken from: http://www.nta-monitor.com/wiki/index.php/Ike-scan_User_Guide
 # Usage: generate-transforms.sh | xargs --max-lines=8 ike-scan 10.0.0.0/24
 
 # Encryption algorithms: DES, Triple-DES, AES/128, AES/192 and AES/256
