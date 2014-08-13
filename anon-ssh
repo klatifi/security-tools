@@ -1,0 +1,4 @@
+#! /bin/bash
+echo -n "Enter the server or IP address: "
+read server
+ssh -t $server screen -ln

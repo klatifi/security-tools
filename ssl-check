@@ -1,0 +1,10 @@
+#!/bin/bash
+sslcheck=$(which openssl) 
+
+echo -n "Enter a server or IP address: "
+read server
+
+echo -n "Enter a port number: "
+read port
+
+$sslcheck s_client -showcerts -connect $server:$port
