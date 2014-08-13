@@ -1,22 +1,30 @@
-kl-heartbleed
+Security Tools
 ==========
 
-A tool for CVE-2014-0160. I named it kl-heartbleed, but you can give it any name you want.
+A set of tools I use for pentesting. For example the heartbleed-test checks for CVE-2014-0160. 
 
-Tool usage:
+Usage:
 
 ```
-    kl-heartbleed server.com -p 443
+$ heartbleed server.com -p 443
 
 ```
 ## Install
 
-* Copy this file into directory  `/usr/bin/`  or `/usr/sbin/`
-* You will need python2 to run this script, open your terminal and run 
+* Copy the files into directory  `/usr/bin/`  or `/usr/sbin/`
+* Make sure they executable 
+
+```
+sudo chmod +x SCRIPTNAME
+```
+
+* For some scripts you will need python2 to run, open your terminal and run 
 ```
 $ which python2
 ```
 * Use the output to replace python2 location at the very beginning of the script. 
+For example: heartbleed-test:
+
 ```
 #!/usr/local/bin/python2
 ```
