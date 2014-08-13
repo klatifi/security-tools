@@ -12,7 +12,7 @@ $ heartbleed server.com -p 443
 ## Install
 
 * Copy the files into directory  `/usr/bin/`  or `/usr/sbin/`
-* Make sure they executable 
+* Make sure are they executable 
 
 ```
 sudo chmod +x SCRIPTNAME
